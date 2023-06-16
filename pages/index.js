@@ -16,16 +16,17 @@ export default function Auth() {
     e.preventDefault()
     if (username.length === 0 || secret.length === 0) return; // does nothing 
     
-    axios.put('https://api.chatengine.io/users/'), 
+    axios.put('https://api.chatengine.io/users/', 
     {username, secret}, 
     {headers: {"Private-key": '7f918868-0bc5-4a11-8808-8d344985c75e'}}
-    .then( r => router.push('/chats'))
+    
+    ).then( r => router.push('/chats'))
   }
 
   return( 
   <div className="background">
     <div className='auth-container'>
-      <form className='auth-form' onSubmit={e => e.onSubmit(e)}>
+      <form className='auth-form' onSubmit={e => onSubmit(e)}>
         <div className='auth-title'> Next JS Chat</div>
         <div className='input-container'>
           <input 
