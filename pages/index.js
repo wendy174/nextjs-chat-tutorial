@@ -1,6 +1,8 @@
 import React, {useContext} from "react";
 import { Context } from '../context'; 
-import {useRouter} from 'next/router'; 
+import {useRouter} from 'next/router';
+// useRouter comes from next.js library 
+// useRouter is used when working with next.js app 
 import axios from 'axios'; 
 // js library used for making http requests //
 
@@ -9,8 +11,7 @@ export default function Auth() {
   const {username, setUsername, secret, setSecret} = useContext(Context)
   
   const router = useRouter()
-  
-// 7f918868-0bc5-4a11-8808-8d344985c75e
+
   
   function onSubmit(e) { 
     e.preventDefault()
